@@ -3,13 +3,12 @@ class Solution:
         map = {}
         for word in strs:
             key = tuple(sorted(list(word)))
-            print(key)
             if key not in map:
                 map[key] = [word]
             else:
                 map[key].append(word)
 
-        grouped = list(map.values())
-        return grouped
+        return list(map.values())
+  
 
         
