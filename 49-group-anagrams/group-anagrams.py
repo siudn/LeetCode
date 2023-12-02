@@ -8,7 +8,7 @@ class Solution:
             else:
                 map[key].append(word)
 
-        return list(map.values())
+        return map.values()
   
 
         
