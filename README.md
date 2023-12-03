@@ -1,2 +1,2 @@
 # LeetCode
-LeetCode
+LeetCoding the pain away
