@@ -3,11 +3,10 @@ from collections import deque
 class Solution:
     def isValid(self, s: str) -> bool:
         stack = deque()
-        opening = ["(","{","["]
         top = -1
 
         for c in s:
-            if c in opening:
+            if c == "(" or c == "{" or c == "[":
                 stack.append(c)
                 top += 1
                 continue
