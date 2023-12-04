@@ -3,32 +3,16 @@ from collections import deque
 class Solution:
     def isValid(self, s: str) -> bool:
         stack = deque()
-        top = -1
+        h = {")" : "(" , "]" : "[" , "}" : "{"}
 
         for c in s:
-            if c == "(" or c == "{" or c == "[":
+            if c not in h:
                 stack.append(c)
-                top += 1
                 continue
-            if top > -1:
-                if c == "]":
-                    if stack[top] != "[":
-                        return False
-                    stack.pop()
-                    top -= 1
-                elif c == "}":
-                    if stack[top] != "{":
-                        return False
-                    stack.pop()
-                    top -= 1
-                elif c == ")":
-                    if stack[top] != "(":
-                        return False
-                    stack.pop()
-                    top -= 1
-            else:
+            if not stack or stack[-1] != h[c]:
                 return False
-        
+            stack.pop()
+
         return not stack
             
         
