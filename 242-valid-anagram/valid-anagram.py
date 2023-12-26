@@ -1,8 +1,13 @@
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
-        s = sorted(s)
-        t = sorted(t)
-        if s == t:
-            return True
-        return False
+        if len(s) != len(t):
+            return False
+
+        sCount, tCount = {}, {}
+
+        for i in range(len(s)):
+            sCount[s[i]] = 1 + sCount.get(s[i], 0)
+            tCount[t[i]] = 1 + tCount.get(t[i], 0)
+        
+        return sCount == tCount
         
