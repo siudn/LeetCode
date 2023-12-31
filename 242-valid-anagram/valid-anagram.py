@@ -4,10 +4,9 @@ class Solution:
             return False
         sTimes = {}
         tTimes = {}
-        for c in s:
-            sTimes[c] = 1 + sTimes.get(c, 0)
-        for c in t:
-            tTimes[c] = 1 + tTimes.get(c, 0)
+        for i in range(len(s)):
+            sTimes[s[i]] = 1 + sTimes.get(s[i], 0)
+            tTimes[t[i]] = 1 + tTimes.get(t[i], 0)
         return sTimes == tTimes
         
         
