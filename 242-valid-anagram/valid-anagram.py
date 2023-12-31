@@ -2,12 +2,13 @@ class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
         if len(s) != len(t):
             return False
-
-        sCount, tCount = {}, {}
-
-        for i in range(len(s)):
-            sCount[s[i]] = 1 + sCount.get(s[i], 0)
-            tCount[t[i]] = 1 + tCount.get(t[i], 0)
+        sTimes = {}
+        tTimes = {}
+        for c in s:
+            sTimes[c] = 1 + sTimes.get(c, 0)
+        for c in t:
+            tTimes[c] = 1 + tTimes.get(c, 0)
+        return sTimes == tTimes
         
-        return sCount == tCount
+        
         
