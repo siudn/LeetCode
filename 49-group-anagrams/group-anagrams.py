@@ -1,14 +1,19 @@
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
-        map = {}
+        d = {}
+        result = []
+
         for word in strs:
-            key = tuple(sorted(list(word)))
-            if key not in map:
-                map[key] = [word]
+            count = [0] * 26
+            for char in word:
+                count[ord(char) - 97] += 1
+            if tuple(count) in d:
+                d[tuple(count)].append(word)
             else:
-                map[key].append(word)
+                d[tuple(count)] = [word]
+                
+        for group in d.values():
+            result.append(group)
 
-        return map.values()
-  
-
-        
+        return result
+            
