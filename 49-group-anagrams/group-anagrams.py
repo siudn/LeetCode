@@ -11,9 +11,6 @@ class Solution:
                 d[tuple(count)].append(word)
             else:
                 d[tuple(count)] = [word]
-                
-        for group in d.values():
-            result.append(group)
 
-        return result
+        return list(d.values())
             
