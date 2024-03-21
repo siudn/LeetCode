@@ -3,11 +3,6 @@ class Solution:
         d = defaultdict(list)
 
         for word in strs:
-            count = [0] * 26
-            for char in word:
-                count[ord(char) - 97] += 1
-                
-            d[tuple(count)].append(word)
+            d["".join(sorted(word))].append(word)
 
         return d.values()
-            
