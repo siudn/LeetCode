@@ -5,15 +5,33 @@
 #         self.left = left
 #         self.right = right
 class Solution:
-    def __init__(self):
-        self.res = []
-
     def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
-        if not root:
-            return
+        stack = []
+        res = []
 
-        self.inorderTraversal(root.left)
-        self.res.append(root.val)
-        self.inorderTraversal(root.right)
+        curr = root
 
-        return self.res
+        while curr or stack:
+            while curr:
+                stack.append(curr)
+                curr = curr.left
+
+            curr = stack.pop()
+            res.append(curr.val)
+
+            curr = curr.right
+        
+        return res
+
+
+            
+
+        
+            
+
+
+
+
+
+
+                
