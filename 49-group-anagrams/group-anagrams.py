@@ -2,14 +2,14 @@ from collections import defaultdict
 
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
-        groups = defaultdict(list)
-        res = []
+        res = defaultdict(list)
 
         for s in strs:
-            groups["".join(sorted(s))].append(s)
+            count = [0] * 26
+            for c in s:
+                count[ord(c) - ord('a')] += 1
+            
+            res[tuple(count)].append(s)
         
-        for group in groups.values():
-            res.append(group)
-        
-        return res
+        return list(res.values())
 
