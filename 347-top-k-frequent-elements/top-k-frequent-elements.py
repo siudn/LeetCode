@@ -15,11 +15,10 @@ class Solution:
         for key, value in freq.items():
             buckets[value].append(key)
         
-        while k > 0:
-            for num in buckets[n]:
-                if k > 0:
-                    res.append(num)
-                    k -= 1
-            n -= 1
+        for i in range(n, 0, -1):
+            for num in buckets[i]:
+                res.append(num)
+                if len(res) == k:
+                    return res
         
         return res
