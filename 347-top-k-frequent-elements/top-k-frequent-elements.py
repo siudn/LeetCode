@@ -6,24 +6,20 @@ class Solution:
         res = []
 
         n = 0
-
         for num in nums:
             freq[num] += 1
+            n = max(n, freq[num])
 
-            if freq[num] > n:
-                n = freq[num]
+        buckets = [[] for _ in range (n + 1)]
 
-        buckets = [[] for _ in range(n + 1)]
-        
         for key, value in freq.items():
             buckets[value].append(key)
         
         while k > 0:
-            for i in buckets[n]:
-                if k <= 0:
-                    break
-                res.append(i)
-                k -= 1
+            for num in buckets[n]:
+                if k > 0:
+                    res.append(num)
+                    k -= 1
             n -= 1
-                
+        
         return res
