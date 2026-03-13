@@ -1,15 +1,21 @@
 int tribonacci(int n) {
     int i;
-    int* memo = malloc(sizeof(int) * 38);
+    int next;
+    int* memo = malloc(sizeof(int) * 3);
 
     memo[0] = 0;
     memo[1] = 1;
     memo[2] = 1;
 
+    if (n <= 2) return memo[n];
+
     for (i = 3; i <= n; i++)
     {
-        memo[i] = memo[i - 3] + memo[i - 2] + memo[i - 1];
+        next = memo[0] + memo[1] + memo[2];
+        memo[0] = memo[1];
+        memo[1] = memo[2];
+        memo[2] = next;
     }
 
-    return memo[n];
+    return memo[2];
 }
