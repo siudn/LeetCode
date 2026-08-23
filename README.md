@@ -17,6 +17,7 @@ LeetCoding the pain away
 ## String
 |  |
 | ------- |
+| [0125-valid-palindrome](https://github.com/siudn/LeetCode/tree/master/0125-valid-palindrome) |
 | [0242-valid-anagram](https://github.com/siudn/LeetCode/tree/master/0242-valid-anagram) |
 ## Sorting
 |  |
@@ -26,4 +27,8 @@ LeetCoding the pain away
 |  |
 | ------- |
 | [0128-longest-consecutive-sequence](https://github.com/siudn/LeetCode/tree/master/0128-longest-consecutive-sequence) |
+## Two Pointers
+|  |
+| ------- |
+| [0125-valid-palindrome](https://github.com/siudn/LeetCode/tree/master/0125-valid-palindrome) |
 <!---LeetCode Topics End-->
