@@ -7,6 +7,7 @@ LeetCoding the pain away
 |  |
 | ------- |
 | [0001-two-sum](https://github.com/siudn/LeetCode/tree/master/0001-two-sum) |
+| [0015-3sum](https://github.com/siudn/LeetCode/tree/master/0015-3sum) |
 | [0128-longest-consecutive-sequence](https://github.com/siudn/LeetCode/tree/master/0128-longest-consecutive-sequence) |
 ## Hash Table
 |  |
@@ -22,6 +23,7 @@ LeetCoding the pain away
 ## Sorting
 |  |
 | ------- |
+| [0015-3sum](https://github.com/siudn/LeetCode/tree/master/0015-3sum) |
 | [0242-valid-anagram](https://github.com/siudn/LeetCode/tree/master/0242-valid-anagram) |
 ## Union-Find
 |  |
@@ -30,5 +32,6 @@ LeetCoding the pain away
 ## Two Pointers
 |  |
 | ------- |
+| [0015-3sum](https://github.com/siudn/LeetCode/tree/master/0015-3sum) |
 | [0125-valid-palindrome](https://github.com/siudn/LeetCode/tree/master/0125-valid-palindrome) |
 <!---LeetCode Topics End-->
