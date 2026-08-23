@@ -9,6 +9,7 @@ LeetCoding the pain away
 | [0001-two-sum](https://github.com/siudn/LeetCode/tree/master/0001-two-sum) |
 | [0015-3sum](https://github.com/siudn/LeetCode/tree/master/0015-3sum) |
 | [0128-longest-consecutive-sequence](https://github.com/siudn/LeetCode/tree/master/0128-longest-consecutive-sequence) |
+| [0153-find-minimum-in-rotated-sorted-array](https://github.com/siudn/LeetCode/tree/master/0153-find-minimum-in-rotated-sorted-array) |
 ## Hash Table
 |  |
 | ------- |
@@ -43,4 +44,8 @@ LeetCoding the pain away
 |  |
 | ------- |
 | [0020-valid-parentheses](https://github.com/siudn/LeetCode/tree/master/0020-valid-parentheses) |
+## Binary Search
+|  |
+| ------- |
+| [0153-find-minimum-in-rotated-sorted-array](https://github.com/siudn/LeetCode/tree/master/0153-find-minimum-in-rotated-sorted-array) |
 <!---LeetCode Topics End-->
