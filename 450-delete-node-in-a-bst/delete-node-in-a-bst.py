@@ -19,16 +19,13 @@ class Solution:
             elif not root.left:
                 return root.right
             else:
-                minNode = self.findMin(root.right)
-                root.val = minNode.val
-                root.right = self.deleteNode(root.right, minNode.val)
-
+                newRoot = self.findMin(root.right)
+                root.val = newRoot.val
+                root.right = self.deleteNode(root.right, newRoot.val)
         return root
-
-    def findMin(self, root: Optional[TreeNode]) -> Optional[TreeNode]:
+    
+    def findMin(self, root):
         curr = root
-
         while curr and curr.left:
             curr = curr.left
-        
         return curr
