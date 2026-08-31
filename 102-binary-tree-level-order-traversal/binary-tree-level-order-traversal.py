@@ -14,20 +14,18 @@ class Solution:
         if root:
             q.append(root)
 
-        level = 0
         while q:
+            level = []
             for i in range(len(q)):
                 curr = q.popleft()
 
-                if len(res) == level:
-                    res.append([curr.val])
-                else:
-                    res[level].append(curr.val)
+                level.append(curr.val)
 
                 if curr.left:
                     q.append(curr.left)
                 if curr.right:
                     q.append(curr.right)
-            level += 1
+                    
+            res.append(level)
 
         return res
